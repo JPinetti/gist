@@ -1,0 +1,54 @@
+@import '~assets/styles/vars';
+
+.container {
+  .container();
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+
+  &__left {
+    width: 376px;
+  }
+}
+
+.sidebar {
+  .white-block();
+
+  width: 376px;
+}
+
+.section {
+  .white-block();
+
+  flex: 1;
+
+  &__headline {
+    border-bottom: 1px solid @color-M4;
+  }
+}
+
+.actions {
+  .white-block();
+
+  &__btn {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.modal {
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    margin-bottom: 0;
+  }
+}

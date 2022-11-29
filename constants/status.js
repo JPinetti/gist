@@ -1,0 +1,73 @@
+export const DRAFT = 'DRAFT';
+export const MODERATION = 'MODERATION';
+export const MODERATION_REJECTED = 'MODERATION_REJECTED';
+export const MODERATION_REVOKED = 'MODERATION_REVOKED';
+export const NOT_ACCREDITED = 'NOT_ACCREDITED';
+export const ACCREDITED = 'ACCREDITED';
+export const ARCHIVED = 'ARCHIVED';
+export const REVIEW = 'REVIEW';
+export const APPROVED = 'APPROVED';
+export const REJECTED = 'REJECTED';
+export const REVIEW_EXPIRED = 'REVIEW_EXPIRED';
+export const REVOKED = 'REVOKED';
+export const TOTAL = 'TOTAL';
+
+export const statusList = [
+  DRAFT,
+  MODERATION,
+  MODERATION_REJECTED,
+  MODERATION_REVOKED,
+  NOT_ACCREDITED,
+  ACCREDITED,
+  ARCHIVED,
+  REVIEW,
+  APPROVED,
+  REJECTED,
+  REVIEW_EXPIRED,
+  REVOKED,
+];
+
+export const bankTabList = [
+  TOTAL,
+  REVIEW,
+  APPROVED,
+  REJECTED,
+  REVOKED,
+  MODERATION_REVOKED,
+  REVIEW_EXPIRED,
+];
+
+export const domrfTabList = [
+  TOTAL,
+  DRAFT,
+  MODERATION,
+  NOT_ACCREDITED,
+  ACCREDITED,
+  MODERATION_REJECTED,
+  MODERATION_REVOKED,
+];
+
+export const statusModel = {
+  PROFILE: 'PROFILE',
+  APPLICATION: 'APPLICATION',
+};
+
+export const profileStatusList = [
+  DRAFT,
+  MODERATION,
+  MODERATION_REJECTED,
+  MODERATION_REVOKED,
+  NOT_ACCREDITED,
+  ACCREDITED,
+  ARCHIVED,
+];
+
+export const applicationStatusList = [
+  MODERATION_REVOKED,
+  REVIEW,
+  APPROVED,
+  REJECTED,
+  REVIEW_EXPIRED,
+  REVOKED,
+  ARCHIVED,
+];

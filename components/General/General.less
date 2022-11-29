@@ -1,0 +1,127 @@
+@import '~assets/styles/vars';
+
+.cards {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+
+  > div {
+    flex: 1 1 25%
+  }
+
+  .error {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  height: 136px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid @color-M3;
+  background-color: @color-M6;
+  border-radius: 2px;
+  cursor: pointer;
+  gap: 12px;
+  text-align: center;
+  transition: @default-transition;
+
+  &:not(&--disabled):hover,
+  &--selected {
+    border-color: @color-L1;
+    background-color: @color-L3;
+
+    svg {
+      color: @color-green_main;
+    }
+  }
+
+  svg {
+    transition: @default-transition;
+  }
+
+  &--selected::before {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 6px solid @color-green_main;
+    background-color: @color-white;
+    border-radius: 50%;
+    content: '';
+  }
+
+  &--disabled {
+    background-color: @color-M5;
+    color: @color-M1;
+    cursor: not-allowed;
+  }
+}
+
+.info {
+  position: relative;
+
+  &__update {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    color: @color-M1;
+  }
+}
+
+.okved {
+  position: relative;
+  border-bottom: 1px solid @color-M4;
+
+  &__list {
+    overflow: auto;
+    max-height: 200px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__code {
+    flex: 0 0 60px;
+  }
+}
+
+.update-info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px 16px;
+  background-color: @color-M6;
+  gap: 8px;
+  text-decoration: none;
+
+  &__icon {
+    transform: rotate(180deg);
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 32px;
+  gap: 32px;
+}

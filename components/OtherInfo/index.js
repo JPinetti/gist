@@ -1,0 +1,1 @@
+export { OtherInfo } from './OtherInfo';

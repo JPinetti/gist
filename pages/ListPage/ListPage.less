@@ -1,0 +1,43 @@
+@import '~assets/styles/vars';
+
+.container {
+  .container();
+}
+
+.tabs {
+  :global(.eisgs-typography) {
+    text-shadow: none;
+  }
+}
+
+// TODO: Убрать .eisgs-pagination, когда будет фикс ERS-21888
+
+:global(.eisgs-pagination) svg {
+  box-sizing: content-box;
+}
+
+.table {
+  [data-testid='header-row'] {
+    position: sticky;
+    z-index: 2;
+    top: @topline-height;
+    background-color: @color-M6;
+  }
+}
+
+.filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+
+  &__search {
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+
+  &__clear {
+    flex-shrink: 0;
+    color: @color-M1;
+    transform: translateY(-8px);
+  }
+}

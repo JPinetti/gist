@@ -1,0 +1,51 @@
+@import '~assets/styles/vars';
+
+.container {
+  .container();
+
+  position: relative;
+  display: flex;
+  min-height: calc(100% - 40px - 56px);
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.left {
+  width: 376px;
+}
+
+.actions {
+  .white-block();
+
+  padding: 24px;
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.section {
+  .white-block();
+
+  flex: 1;
+
+  &__headline {
+    border-bottom: 1px solid @color-M4;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid @color-M4;
+
+    :only-child {
+      margin-left: auto;
+    }
+  }
+}
+
+.drawer {
+  &__description {
+    line-height: 20px;
+  }
+}

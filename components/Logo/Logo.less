@@ -1,0 +1,95 @@
+@import '~assets/styles/vars';
+
+@attach-size: 206px;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.attach-area {
+  position: relative;
+  width: @attach-size;
+  border: 1px dashed @color-M1;
+  aspect-ratio: 1;
+  background-color: @color-white;
+  transition: @default-transition;
+
+  :global {
+    [data-testid='attach-container'] {
+      height: @attach-size;
+    }
+  }
+
+  &:not(&--disabled):hover {
+    background-color: @color-L2;
+  }
+
+  &--disabled {
+    background-color: @color-M5;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    width: 120px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.attach {
+  width: @attach-size;
+  height: @attach-size;
+  opacity: 0;
+}
+
+.requirements {
+  width: 560px;
+  padding-block: 24px;
+  text-align: center;
+}
+
+.attached {
+  width: @attach-size;
+  border: 1px solid @color-M1;
+  aspect-ratio: 1;
+  border-radius: 4px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  gap: 16px;
+}
+
+.download {
+  text-decoration: none;
+}
+
+.big-logo {
+  width: 350px;
+  height: 350px;
+
+  &--empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border: 1px solid @color-M4;
+    background-color: @color-M6;
+    border-radius: 4px;
+    text-align: center;
+  }
+}
